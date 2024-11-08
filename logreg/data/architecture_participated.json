@@ -1,0 +1,146 @@
+[
+    {
+        "name": "Accurate Institute of Architecture & Planning",
+        "city": "Greater Noida",
+        "state": "Uttar Pradesh",
+        "website": "https://www.accurate.in/architecture/"
+    },
+    {
+        "name": "Acharya NRV School of Architecture, Bangalore",
+        "city": "Bangalore",
+        "state": "Karnataka",
+        "website": "https://www.acharya.ac.in/"
+    },
+    {
+        "name": "Aligarh Muslim University",
+        "city": "Aligarh",
+        "state": "Uttar Pradesh",
+        "website": "https://www.amu.ac.in/"
+    },
+    {
+        "name": "Anna University",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "website": "https://www.annauniv.edu/"
+    },
+    {
+        "name": "BMS College of Architecture",
+        "city": "Bengaluru",
+        "state": "Karnataka",
+        "website": "https://bmsca.org/"
+    },
+    {
+        "name": "Chandigarh University",
+        "city": "Mohali",
+        "state": "Punjab",
+        "website": "https://www.cuchd.in/"
+    },
+    {
+        "name": "Chitkara University",
+        "city": "Rajpura",
+        "state": "Punjab",
+        "website": "https://www.chitkara.edu.in/"
+    },
+    {
+        "name": "College of Engineering, Trivandrum",
+        "city": "Thiruvananthapuram",
+        "state": "Kerala",
+        "website": "http://www.cet.ac.in/"
+    },
+    {
+        "name": "CT Institute of Architecture and Planning",
+        "city": "Jalandhar",
+        "state": "Punjab",
+        "website": "https://www.ctgroup.in/"
+    },
+    {
+        "name": "Deenbandhu Chhotu Ram University of Science & Technology",
+        "city": "Sonipat",
+        "state": "Haryana",
+        "website": "https://dcrustm.ac.in/"
+    },
+    {
+        "name": "Faculty of Architecture and Planning, Dr APJ Abdul Kalam Technical University",
+        "city": "Lucknow",
+        "state": "Uttar Pradesh",
+        "website": "https://aktu.ac.in/"
+    },
+    {
+        "name": "Gandhi Institute of Technology and Management",
+        "city": "Visakhapatnam",
+        "state": "Andhra Pradesh",
+        "website": "https://www.gitam.edu/"
+    },
+    {
+        "name": "Guru Gobind Singh Indraprastha University",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "website": "http://www.ipu.ac.in/"
+    },
+    {
+        "name": "Hindustan Institute of Technology and Science (HITS)",
+        "city": "Chennai",
+        "state": "Tamil Nadu",
+        "website": "https://hindustanuniv.ac.in/"
+    },
+    {
+        "name": "Indian Institute of Technology, Kharagpur",
+        "city": "Kharagpur",
+        "state": "West Bengal",
+        "website": "http://www.iitkgp.ac.in/"
+    },
+    {
+        "name": "Indian Institute of Technology, Roorkee",
+        "city": "Roorkee",
+        "state": "Uttarakhand",
+        "website": "https://www.iitr.ac.in/"
+    },
+    {
+        "name": "Jamia Millia Islamia, New Delhi",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "website": "https://www.jmi.ac.in/"
+    },
+    {
+        "name": "Lovely Professional University",
+        "city": "Phagwara",
+        "state": "Punjab",
+        "website": "https://www.lpu.in/"
+    },
+    {
+        "name": "National Institute of Technology, Calicut",
+        "city": "Kozhikode",
+        "state": "Kerala",
+        "website": "https://www.nitc.ac.in/"
+    },
+    {
+        "name": "School of Planning and Architecture, Bhopal",
+        "city": "Bhopal",
+        "state": "Madhya Pradesh",
+        "website": "https://spa.ac.in/"
+    },
+    {
+        "name": "School of Planning and Architecture, New Delhi",
+        "city": "New Delhi",
+        "state": "Delhi",
+        "website": "http://spa.ac.in/"
+    },
+    {
+        "name": "Sushant University",
+        "city": "Gurugram",
+        "state": "Haryana",
+        "website": "https://sushantuniversity.edu.in/"
+    },
+    {
+        "name": "Thiagarajar College of Engineering",
+        "city": "Madurai",
+        "state": "Tamil Nadu",
+        "website": "https://www.tce.edu/"
+    },
+    {
+        "name": "Visvesvaraya National Institute of Technology, Nagpur",
+        "city": "Nagpur",
+        "state": "Maharashtra",
+        "website": "https://vnit.ac.in/"
+    }
+]

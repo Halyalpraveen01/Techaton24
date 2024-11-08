@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Rankings and Career Paths</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin-top: 50px;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .career-paths {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            margin-top: 40px;
+        }
+        .career-paths h2 {
+            color: #333;
+        }
+        .website-link {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .website-link:hover {
+            text-decoration: underline;
+        }
+        .table th, .table td {
+            vertical-align: middle;
+        }
+        .rank-column {
+            width: 80px; /* Increase the rank column width */
+        }
+        #login-form, #logout-btn {
+            display: none;
+        }
+        #logout-btn.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 class="text-center mb-4">College Rankings and Career Paths</h1>
+
+        <!-- Login Form -->
+        <div id="login-form" class="text-center">
+            <h3>Please log in to access rankings:</h3>
+            <input type="text" id="username" class="form-control" placeholder="Username" style="max-width: 300px;">
+            <input type="password" id="password" class="form-control mt-2" placeholder="Password" style="max-width: 300px;">
+            <button onclick="login()" class="btn btn-primary mt-3">Login</button>
+        </div>
+
+        <!-- Logout Button -->
+        <div id="logout-btn" class="text-center show">
+            <button onclick="logout()" class="btn btn-danger">Logout</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-bar text-center">
+            <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search for colleges..." style="max-width: 500px; margin: 0 auto;">
+            <button onclick="searchColleges()" class="btn btn-primary mt-3">Search</button>
+        </div>
+
+        <!-- College Rankings Tables -->
+        <div id="tables-container"></div>
+
+        <!-- Career Paths Section -->
+        <div class="career-paths">
+            <h2>Career Paths</h2>
+            <p><strong>Architecture:</strong> As an architect, you can work in residential, commercial, or industrial design, urban planning...</p>
+            <p><strong>Dental:</strong> Dentistry offers a variety of career paths, including becoming a general dentist, orthodontist, periodontist...</p>
+            <p><strong>Engineering:</strong> Engineering careers are diverse and span fields such as civil, mechanical, electrical, software...</p>
+            <p><strong>Law:</strong> Law offers career paths as a lawyer, judge, legal advisor, corporate counsel...</p>
+            <p><strong>Management:</strong> A degree in management can lead to careers in business administration, project management...</p>
+            <p><strong>Medical:</strong> Medical careers offer a wide range of paths, including becoming a doctor, nurse, medical researcher...</p>
+            <p><strong>Pharmacy:</strong> Pharmacists can work in retail pharmacies, hospitals, or pharmaceutical companies...</p>
+        </div>
+
+    </div>
+
+    <script>
+        // Simulate session storage using localStorage
+        function checkLogin() {
+            if (localStorage.getItem('loggedIn')) {
+                document.getElementById('login-form').style.display = 'none';
+                document.getElementById('logout-btn').classList.add('show');
+                loadRankingTables();
+            } else {
+                document.getElementById('login-form').style.display = 'block';
+                document.getElementById('logout-btn').classList.remove('show');
+            }
+        }
+
+        // Login function to simulate user authentication
+        function login() {
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            // Simulate basic login check (In production, authenticate with a server)
+            if (username === "user" && password === "password") {
+                localStorage.setItem('loggedIn', true); // Store login session
+                checkLogin(); // Update UI based on login status
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+
+        // Logout function to end the session
+        function logout() {
+            localStorage.removeItem('loggedIn');
+            checkLogin();
+        }
+
+        // Function to fetch and display the tables
+        function loadRankingTables() {
+            const categories = [
+                'architecture', 'dental', 'engineering', 'law', 
+                'management', 'medical', 'pharmacy', 'university', 'research'
+            ];
+
+            categories.forEach(category => createRankingTable(category));
+        }
+
+        // Function to create a ranking table for each category
+        function createRankingTable(category) {
+            const tablesContainer = document.getElementById('tables-container');
+            const tableHTML = `
+                <h2>${category.charAt(0).toUpperCase() + category.slice(1)} Rankings</h2>
+                <table id="${category}-ranking" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th class="rank-column">Rank</th>
+                            <th>College Name</th>
+                            <th>City</th>
+                            <th>State</th>
+                            <th>Website</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be inserted dynamically here -->
+                    </tbody>
+                </table>
+            `;
+            tablesContainer.innerHTML += tableHTML;
+            fetchAndPopulateTable(`${category}_ranking.json`, `${category}-ranking`, category);
+        }
+
+        // Function to fetch ranking data from JSON and populate the table
+        function fetchAndPopulateTable(url, tableId, category) {
+            fetch(url)
+                .then(response => response.json())
+                .then(data => populateRankingTable(data, tableId, category))
+                .catch(error => console.error('Error fetching data:', error));
+        }
+
+        // Function to populate the ranking table
+        function populateRankingTable(data, tableId, category) {
+            const tableBody = document.getElementById(tableId).getElementsByTagName('tbody')[0];
+            tableBody.innerHTML = "";  // Clear existing rows
+            data.forEach(item => {
+                const row = tableBody.insertRow();
+                row.innerHTML = `
+                    <td>${item.rank}</td>
+                    <td>${item.name}</td>
+                    <td>${item.city}</td>
+                    <td>${item.state}</td>
+                    <td><a href="${item.website}" class="website-link" target="_blank">Visit Website</a></td>
+                `;
+            });
+        }
+
+        // Search function to filter the tables based on user input
+        function searchColleges() {
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const tables = document.querySelectorAll('table');
+            tables.forEach(table => {
+                const rows = table.getElementsByTagName('tr');
+                for (let i = 1; i < rows.length; i++) {
+                    const cols = rows[i].getElementsByTagName('td');
+                    const name = cols[1].innerText.toLowerCase();
+                    if (name.includes(searchInput)) {
+                        rows[i].style.display = '';
+                    } else {
+                        rows[i].style.display = 'none';
+                    }
+                }
+            });
+        }
+
+        // Initialize session check on page load
+        window.onload = checkLogin;
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

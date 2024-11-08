@@ -1,0 +1,63 @@
+[
+    {
+      "college": "Aligarh Muslim University",
+      "city": "Aligarh",
+      "state": "Uttar Pradesh",
+      "website": "https://www.amu.ac.in"
+    },
+    {
+      "college": "Allahabad Degree College",
+      "city": "Prayagraj",
+      "state": "Uttar Pradesh",
+      "website": "http://www.adc.edu.in"
+    },
+    {
+      "college": "Alliance University",
+      "city": "Bengaluru",
+      "state": "Karnataka",
+      "website": "https://www.alliance.edu.in"
+    },
+    {
+      "college": "Amity University Haryana, Gurgaon",
+      "city": "Gurgaon",
+      "state": "Haryana",
+      "website": "https://www.amity.edu/gurgaon"
+    },
+    {
+      "college": "Amity University, Gwalior",
+      "city": "Gwalior",
+      "state": "Madhya Pradesh",
+      "website": "https://www.amity.edu/gwalior"
+    },
+    {
+      "college": "Amolakchand Vidhi Mahavidyalaya, Yavatmal",
+      "city": "Yavatmal",
+      "state": "Maharashtra",
+      "website": "http://www.amlawcollege.org"
+    },
+    {
+      "college": "Army Institute of Law, Mohali",
+      "city": "Mohali",
+      "state": "Punjab",
+      "website": "https://www.ail.ac.in"
+    },
+    {
+      "college": "Asian Law College",
+      "city": "Noida",
+      "state": "Uttar Pradesh",
+      "website": "https://www.alc.edu.in"
+    },
+    {
+      "college": "Babasheb Bhimrao Ambedkar University",
+      "city": "Lucknow",
+      "state": "Uttar Pradesh",
+      "website": "https://www.bbau.ac.in"
+    },
+    {
+      "college": "Banaras Hindu University",
+      "city": "Varanasi",
+      "state": "Uttar Pradesh",
+      "website": "https://www.bhu.ac.in"
+    }
+  ]
+  
